@@ -90,6 +90,11 @@ Este fichero lleva el control detallado de los dividendos recibidos por cada acc
 
 - El usuario puede cargar los ficheros de **Compras/Ventas, Dividendos, Cambio de Divisas**, y (opcionalmente) el fichero de **Estado Actual de la Cartera.**
 - Si se carga el fichero de estado actual, la aplicación puede utilizarlo como punto de partida para los cálculos y análisis de la cartera. Si no, reconstruye la cartera a partir del historial de compras/ventas.
+- **Crear cartera desde 0**: Permite al usuario crear una cartera nueva sin necesidad de cargar ficheros. El usuario podrá:
+    - **Seleccionar Tickers**: Elegir las acciones que desea incluir en su cartera
+    - **Introducir Datos**: Ingresar manualmente la cantidad de acciones, el precio por acción y otros detalles relevantes.
+    - **Guardar Cartera**: Una vez completada, la cartera se puede guardar en la base de datos o como un fichero para su uso futuro 
+
 
 ## 2. Reconstrucción de la Cartera
 
