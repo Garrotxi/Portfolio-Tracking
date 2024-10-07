@@ -21,5 +21,8 @@ COPY ./readme.md ./readme.md
 # Establece la variable de entorno para la base de datos SQLite
 ENV DATABASE_URL=sqlite:///data/cartera.db
 
+# Establece la variable de entorno para PYTHONPATH
+ENV PYTHONPATH=/app/scripts
+
 # Ejecuta el script principal que inicia el flujo de importación
 CMD ["python", "scripts/input_output/import_complete_workflow.py"]
