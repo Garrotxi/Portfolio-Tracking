@@ -22,4 +22,4 @@ COPY ./readme.md ./readme.md
 ENV DATABASE_URL=sqlite:///data/cartera.db
 
 # Ejecuta el script principal que inicia el flujo de importación
-CMD ["python", "input_output/import_complete_workflow.py"]
+CMD ["python", "scripts/input_output/import_complete_workflow.py"]
