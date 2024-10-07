@@ -35,8 +35,8 @@ Este fichero permite cargar la cartera actual sin necesidad de reconstruirla des
 - Cantidad de acciones
 - Precio promedio
 - Valor actual
-- Dividendo acumulado
-- Rendimiento por dividendo
+- Dividendo acumulado (opcional)
+- Rendimiento por dividendo (opcional)
 - Broker
 
 **Propósito:**
@@ -55,6 +55,7 @@ Controla el tipo de cambio y las comisiones aplicadas por el broker durante una 
 - Divisa destino
 - Tipo de cambio aplicado (por el broker)
 - Comisiones de cambio
+- Importe convertido
 - Broker
 - Fuente del tipo de cambio (opcional)
 
