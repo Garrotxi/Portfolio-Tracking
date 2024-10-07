@@ -1,3 +1,5 @@
+# Estructura de ficheros
+
 ## 1. Fichero de Compras/Ventas:
 
 Este es el historial de operaciones que la aplicación usará para reconstruir la cartera.
@@ -42,7 +44,7 @@ Este fichero permite cargar la cartera actual sin necesidad de reconstruirla des
 - Permite a los usuarios cargar directamente el estado actual de su cartera en lugar de depender exclusivamente del histórico.
 - Se puede sincronizar con el historial de compras/ventas para mantener la cartera actualizada.
 
-## 3. Fichero de Cambio de Divisas (Actualizado):
+## 3. Fichero de Cambio de Divisas:
 
 Controla el tipo de cambio y las comisiones aplicadas por el broker durante una operación de conversión de divisa.
 
@@ -84,17 +86,16 @@ Este fichero lleva el control detallado de los dividendos recibidos por cada acc
 - La aplicación usa este fichero para calcular los ingresos por dividendos, ajustando los valores si es necesario a la divisa local.
 - Permite generar informes sobre el rendimiento por dividendos y su impacto en la rentabilidad total.
 
-# **Flujo y Lógica de la Aplicación:**
+# Flujo y Lógica de la Aplicación
 
 ## 1. Carga de Ficheros
 
-- El usuario puede cargar los ficheros de **Compras/Ventas, Dividendos, Cambio de Divisas**, y (opcionalmente) el fichero de **Estado Actual de la Cartera.**
-- Si se carga el fichero de estado actual, la aplicación puede utilizarlo como punto de partida para los cálculos y análisis de la cartera. Si no, reconstruye la cartera a partir del historial de compras/ventas.
-- **Crear cartera desde 0**: Permite al usuario crear una cartera nueva sin necesidad de cargar ficheros. El usuario podrá:
-    - **Seleccionar Tickers**: Elegir las acciones que desea incluir en su cartera
-    - **Introducir Datos**: Ingresar manualmente la cantidad de acciones, el precio por acción y otros detalles relevantes.
-    - **Guardar Cartera**: Una vez completada, la cartera se puede guardar en la base de datos o como un fichero para su uso futuro 
-
+- Opción 1: El usuario carga los ficheros **Compras/Ventas, Dividendos, Cambio de Divisas**.
+- Opción 2: El usuario carga el fichero de **Estado Actual de la Cartera.**: Si se carga el fichero de estado actual, la aplicación puede utilizarlo como punto de partida para los cálculos y análisis de la cartera. Si no, reconstruye la cartera a partir del historial de compras/ventas.
+- Opción 3: **Crear cartera desde 0** permite al usuario crear una cartera nueva sin necesidad de cargar ficheros. El usuario podrá:
+  - **Seleccionar Tickers**: Elegir las acciones que desea incluir en su cartera
+  - **Introducir Datos**: Ingresar manualmente la cantidad de acciones, el precio por acción y otros detalles relevantes.
+  - **Guardar Cartera**: Una vez completada, la cartera se puede guardar en la base de datos o como un fichero para su uso futuro.
 
 ## 2. Reconstrucción de la Cartera
 
