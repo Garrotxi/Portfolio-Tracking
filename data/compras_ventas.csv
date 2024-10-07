@@ -1,0 +1,13 @@
+Fecha,Ticker,Divisa,Cantidad de acciones,Precio por acción,Comisiones,Impuestos,Precio total,Broker,Tipo de operación,Precio ajustado en divisa local
+2024-01-10,SAN,EUR,100,3.0,1.5,0.2,301.7,Broker1,Compra,
+2024-02-15,IAG,EUR,150,1.5,2.0,0.3,227.3,Broker2,Compra,
+2024-03-05,REP,EUR,80,15.0,3.0,0.5,1203.5,Broker3,Compra,
+2024-04-12,TEF,EUR,200,4.0,4.0,0.6,804.6,Broker1,Compra,
+2024-05-20,ITX,EUR,50,30.0,1.0,0.4,1501.4,Broker2,Compra,
+2024-06-01,BP,GBP,75,5.5,3.0,0.5,418.5,Broker1,Compra,490.0
+2024-07-10,GSK,GBP,120,14.0,2.5,0.3,1682.8,Broker2,Compra,1920.0
+2024-08-18,RDSA,GBP,50,22.5,2.0,0.2,1127.0,Broker3,Compra,1300.0
+2024-09-15,AAPL,USD,30,150.0,3.0,1.0,4504.5,Broker1,Compra,4300.0
+2024-10-05,MSFT,USD,20,310.0,4.0,0.8,6206.8,Broker2,Compra,6000.0
+2024-11-25,SAN,EUR,50,3.1,1.5,0.2,155.7,Broker1,Venta,
+2024-12-02,TEF,EUR,100,4.2,4.0,0.4,420.4,Broker2,Venta,

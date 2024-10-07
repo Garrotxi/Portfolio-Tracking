@@ -1,0 +1,6 @@
+Fecha,Divisa origen,Divisa destino,Tipo de cambio aplicado,Comisiones de cambio,Importe convertido,Broker,Fuente del tipo de cambio
+2024-06-01,EUR,GBP,0.85,1.0,490.0,Broker1,XE.com
+2024-07-10,EUR,GBP,0.87,2.0,1920.0,Broker2,Bloomberg
+2024-08-18,EUR,GBP,0.86,1.5,1300.0,Broker3,XE.com
+2024-09-15,EUR,USD,1.1,2.0,4300.0,Broker1,Reuters
+2024-10-05,EUR,USD,1.12,3.0,6000.0,Broker2,XE.com
