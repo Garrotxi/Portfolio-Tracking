@@ -1,4 +1,4 @@
-Fecha,Ticker,Divisa,Cantidad de acciones al cobrar el dividendo,Importe bruto,Retención en origen,Retención en destino,Importe neto,Broker,Rendimiento del dividendo,Dividendo reinvertido
+Fecha,Ticker,Divisa,Cantidad_de_acciones_al_cobrar,Importe_bruto,Retencion_en_origen,Retencion_en_destino,Importe_neto,Broker,Rendimiento_del_dividendo,Dividendo_reinvertido
 2024-03-25,SAN,EUR,100,30.0,5.0,2.0,23.0,Broker1,3.5,False
 2024-05-18,TEF,EUR,200,40.0,6.0,3.0,31.0,Broker1,2.5,True
 2024-07-01,BP,GBP,75,82.5,10.0,5.0,67.5,Broker2,4.0,False

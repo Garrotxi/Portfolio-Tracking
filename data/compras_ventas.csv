@@ -1,4 +1,4 @@
-Fecha,Ticker,Divisa,Cantidad de acciones,Precio por acción,Comisiones,Impuestos,Precio total,Broker,Tipo de operación,Precio ajustado en divisa local
+Fecha,Ticker,Divisa,Cantidad_de_acciones,Precio_por_accion,Comisiones,Impuestos,Precio_total,Broker,Tipo_de_operacion,Precio_ajustado_en_divisa_local
 2024-01-10,SAN,EUR,100,3.0,1.5,0.2,301.7,Broker1,Compra,
 2024-02-15,IAG,EUR,150,1.5,2.0,0.3,227.3,Broker2,Compra,
 2024-03-05,REP,EUR,80,15.0,3.0,0.5,1203.5,Broker3,Compra,
