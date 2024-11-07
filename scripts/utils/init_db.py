@@ -3,8 +3,12 @@ import sqlite3
 import logging
 
 # Configuración de logging
-logging.basicConfig(filename='/app/logs/init_db.log', level=logging.INFO, 
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger('init_db')
+handler = logging.FileHandler('/app/logs/init_db.log')
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+logger.setLevel(logging.INFO)
 
 try:
     # Conexión a la base de datos (se creará si no existe)
@@ -12,7 +16,7 @@ try:
     cursor = conn.cursor()
 
     # Crear tabla de Compras/Ventas
-    logging.info('Creando tabla Compras_Ventas...')
+    logger.info('Creando tabla Compras_Ventas...')
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS Compras_Ventas (
         id INTEGER PRIMARY KEY,
@@ -31,7 +35,7 @@ try:
     ''')
 
     # Crear tabla de Dividendos
-    logging.info('Creando tabla Dividendos...')
+    logger.info('Creando tabla Dividendos...')
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS Dividendos (
         id INTEGER PRIMARY KEY,
@@ -50,7 +54,7 @@ try:
     ''')
 
     # Crear tabla de Cambio de Divisas
-    logging.info('Creando tabla Cambio_Divisas...')
+    logger.info('Creando tabla Cambio_Divisas...')
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS Cambio_Divisas (
         id INTEGER PRIMARY KEY,
@@ -66,7 +70,7 @@ try:
     ''')
 
     # Crear tabla de Estado Actual de la Cartera
-    logging.info('Creando tabla Estado_Actual_Cartera...')
+    logger.info('Creando tabla Estado_Actual_Cartera...')
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS Estado_Actual_Cartera (
         id INTEGER PRIMARY KEY,
@@ -83,11 +87,11 @@ try:
 
     # Guardar los cambios
     conn.commit()
-    logging.info('Base de datos inicializada correctamente.')
+    logger.info('Base de datos inicializada correctamente.')
     
 except sqlite3.Error as e:
-    logging.error(f'Error al inicializar la base de datos: {e}')
+    logger.error(f'Error al inicializar la base de datos: {e}')
 finally:
     if conn:
         conn.close()
-        logging.info('Conexión a la base de datos cerrada.')
+        logger.info('Conexión a la base de datos cerrada.')

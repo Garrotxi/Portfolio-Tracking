@@ -4,20 +4,23 @@ import sqlite3
 import logging
 
 # Configuración de logging
-logging.basicConfig(filename='/app/logs/load_compras_ventas.log', level=logging.INFO, 
-                    format='%(asctime)s - %(levelname)s - %(message)s')
-
+logger = logging.getLogger('load_compras_ventas')
+handler = logging.FileHandler('/app/logs/load_compras_ventas.log')
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+logger.setLevel(logging.INFO)
 
 def load_compras_ventas():
     try:
-        logging.info('Cargando datos de compras/ventas...')
+        logger.info('Cargando datos de compras/ventas...')
         conn = sqlite3.connect('/app/data/cartera.db')
         compras_ventas_df = pd.read_csv('/app/data/compras_ventas.csv')
         compras_ventas_df.to_sql('Compras_Ventas', conn, if_exists='append', index=False)
-        logging.info('Datos de compras/ventas cargados exitosamente.')
+        logger.info('Datos de compras/ventas cargados exitosamente.')
     except Exception as e:
-        logging.error(f'Error al cargar compras/ventas: {e}')
+        logger.error(f'Error al cargar compras/ventas: {e}')
     finally:
         if conn:
             conn.close()
-            logging.info('Conexión a la base de datos cerrada.')
+            logger.info('Conexión a la base de datos cerrada.')
